@@ -22,4 +22,6 @@ def linear_search(number, range)
 end
 
 # 出力 :nodoc:
-linear_search(101, [*1..100])
+my_range = [*1..200].shuffle.take(100)
+my_number = rand(1..200)
+linear_search(my_number, my_range)
