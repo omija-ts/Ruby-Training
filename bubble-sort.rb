@@ -23,7 +23,7 @@ def bubble_sort(range, flag = 1)
         range[i + 1] = number 
       end
     end
-  endgit
+  end
 end
 
 # 出力 :nodoc:
