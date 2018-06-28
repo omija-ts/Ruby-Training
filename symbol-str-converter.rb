@@ -21,5 +21,6 @@ def symbol_str_converter(my_hash)
   my_hash = Hash[*my_array.flatten]
 end
 
+# 出力 :nodoc:
 my_hash = { :a => 1, b: 2 }
 p symbol_str_converter(my_hash)
