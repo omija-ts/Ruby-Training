@@ -13,10 +13,8 @@
 #++
 
 def bubble_sort(range, flag = 1) 
-  counter = 1
-  for i in 1..range.size - 1
-    counter += 1
-    for j in 0..range.size - counter
+  for i in 1...range.size
+    for j in 0..(range.size - i)
       if (range[j] <=> range[j + 1]) == flag
         number = range[j]
         range[j] = range[j + 1]
@@ -30,4 +28,4 @@ end
 # 出力 :nodoc:
 my_range = [*0..100].shuffle.take(10)
 puts "#{my_range}:元データ"
-bubble_sort([*1..30], -1)
+p bubble_sort(my_range)
