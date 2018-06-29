@@ -4,19 +4,19 @@
 # * range :: 検索範囲: array
 # * flag :: 昇順降順判定用: integer(1 = 昇順, -1 = 降順)
 # ==== 変数
-# * i :: カウンター: integer 
+# * counter :: カウンター: integer 
 # * number :: 数値格納用: integer
 #--
 # ==== 処理内容
-# for で配列の要素数だけ回す。必要数だけ回そうとすると条件分岐が必要になるため、
-# ソートに必要なマックス数である配列の要素数でループさせる。
+# for で配列の要素数を回す、1回の処理ごとにループの数を減らしていく
 # ネスト内で要素同士を比べ、正の場合は number に一時的に数値を格納し入れ替える。
 #++
 
 def bubble_sort(range, flag = 1) 
-  i = 0
-  for i in range
-    for i in 0..range.size
+  counter = 1
+  for i in 1..range.size - counter
+    counter += 1
+    for i in 0..range.size - counter
       if (range[i] <=> range[i + 1]) == flag
         number = range[i]
         range[i] = range[i + 1]
@@ -24,6 +24,7 @@ def bubble_sort(range, flag = 1)
       end
     end
   end
+  range
 end
 
 # 出力 :nodoc:
