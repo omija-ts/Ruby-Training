@@ -25,7 +25,7 @@ def bubble_sort(range, flag = 1)
          counter += 1
       end
     end
-    return "ソート済みでした" if counter == range.size
+  return range if (counter - 1) == (range.size - i)
   end
   range
 end
@@ -33,4 +33,4 @@ end
 # 出力 :nodoc:
 my_range = [*0..100].shuffle.take(10)
 puts "#{my_range}:元データ"
-p bubble_sort([*1..10])
+p bubble_sort([1, 2, 3, 7, 5, 6])
