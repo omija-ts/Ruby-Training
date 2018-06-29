@@ -17,7 +17,7 @@ def get_prime_numbers(max)
   my_array = [*2..max]
 
   2.upto(root) { |i|
-    my_array.reject! { |e| (e % i == 0) && (e > i) }
+    my_array.reject! { |n| (n % i == 0) && (n > i) }
   }
   return my_array
 end
