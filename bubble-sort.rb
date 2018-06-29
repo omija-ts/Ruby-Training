@@ -14,13 +14,13 @@
 
 def bubble_sort(range, flag = 1) 
   counter = 1
-  for i in 1..range.size - counter
+  for i in 1..range.size - 1
     counter += 1
-    for i in 0..range.size - counter
-      if (range[i] <=> range[i + 1]) == flag
-        number = range[i]
-        range[i] = range[i + 1]
-        range[i + 1] = number 
+    for j in 0..range.size - counter
+      if (range[j] <=> range[j + 1]) == flag
+        number = range[j]
+        range[j] = range[j + 1]
+        range[j + 1] = number 
       end
     end
   end
@@ -30,4 +30,4 @@ end
 # 出力 :nodoc:
 my_range = [*0..100].shuffle.take(10)
 puts "#{my_range}:元データ"
-p bubble_sort(my_range)
+bubble_sort([*1..30], -1)
