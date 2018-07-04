@@ -10,21 +10,21 @@
 # ==== 処理内容
 # for で配列の要素数を回す、1回の処理ごとに i でループの数を減らしていく
 # ネスト内で要素同士を比べ、正の場合は number に一時的に数値を格納し入れ替える。
-# counter に range.size の値を入れ込み、ループ後に変化がなければソート済みとして return する。
+# return_boolean がTrueのままならソート済みとして return する。
 #++
 
 def bubble_sort(range, flag = 1)
   for i in 1...range.size
-    counter = (range.size - i)
+    return_boolean = true
     for j in 0..(range.size - i)
       if (range[j] <=> range[j + 1]) == flag
         number = range[j]
         range[j] = range[j + 1]
         range[j + 1] = number 
-        counter = 0
+        return_boolean = false
       end
     end
-    return range if counter == (range.size - i)
+    return range if return_boolean == true
   end
   range
 end
