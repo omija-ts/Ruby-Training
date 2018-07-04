@@ -24,7 +24,7 @@ def bubble_sort(range, flag = 1)
         has_completed_sort = false
       end
     end
-    return range if has_completed_sort == true
+    return range if has_completed_sort
   end
   range
 end
