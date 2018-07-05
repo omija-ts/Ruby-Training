@@ -7,11 +7,11 @@ class SelectionSort
 
   # ソート実行用メインメソッド
   def sort_array
-    @should_rewrite = false
     target_index = 0
-
     for target_index in 0..(@range.size - 1)
+      @should_rewrite = false
       @mini_or_max_number_index = target_index
+
       for survey_index in (1 + target_index)..(@range.size - 1)
         @asce_flag ? ascending_sort_search(survey_index) : descending_sort_search(survey_index) 
       end
