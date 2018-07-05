@@ -8,6 +8,7 @@ class SelectionSort
   # ソート実行用メインメソッド
   def sort_array
     target_index = 0
+
     for target_index in 0..(@range.size - 1)
       @should_rewrite = false
       @mini_or_max_number_index = target_index
@@ -15,6 +16,7 @@ class SelectionSort
       for survey_index in (1 + target_index)..(@range.size - 1)
         @asce_flag ? ascending_sort_search(survey_index) : descending_sort_search(survey_index) 
       end
+
       rewrite_array(target_index) if @should_rewrite
       return @range if completed_sort?   
     end
@@ -55,6 +57,7 @@ class SelectionSort
         has_completed_sort = false if @range[i] < @range[i + 1]
       end
     end
+
     has_completed_sort
   end
 end
