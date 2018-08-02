@@ -1,0 +1,8 @@
+<ul>
+  <% @feed.entries.each do |entry| %>
+  <li>
+    <a href= "<%= entry.url %>"><%= entry.title %></a>
+    <%= entry.last_modified.to_s %>
+  </li>
+  <% end %>
+</ul>
