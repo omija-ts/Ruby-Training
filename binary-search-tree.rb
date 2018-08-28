@@ -4,7 +4,7 @@
 # * array :: 検索範囲: array
 # * number :: 検索値: integer
 # ==== 変数
-# * i :: カウンター: integer 
+# * i :: カウンター: integer
 # * high :: 要素の最後の添字を格納: integer
 # * low :: 要素の最初の添字を格納: integer
 # * log :: 対数を格納: integer
@@ -26,8 +26,8 @@ def binary_search_tree(array, number)
 
   while i < log
     middle = ((low + high) / 2)
-    if array[middle] == number
-      result = middle ; break
+    if array[middle] ==  number
+      result = middle break
     else
       middle < number ? low = middle : high = middle
     end
@@ -37,6 +37,6 @@ def binary_search_tree(array, number)
 end
 
 # 出力 :nodoc:
-number = rand(1..10000)
-array = [*1..10000].take(5000)
+number = rand(1..10_000)
+array = [*1..10_000].take(5000)
 p binary_search_tree(array, number)
