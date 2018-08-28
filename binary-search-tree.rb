@@ -20,13 +20,13 @@
 
 def binary_search_tree(array, number)
   i = 0
-  high =array.size
+  high = array.size
   low = 0
   log = Math.log2(array.size.to_i)
 
   while i < log
     middle = ((low + high) / 2)
-    if array[middle] ==  number
+    if array[middle] == number
       result = middle break
     else
       middle < number ? low = middle : high = middle
@@ -37,6 +37,6 @@ def binary_search_tree(array, number)
 end
 
 # 出力 :nodoc:
-number =rand(1..10_000)
+number = rand(1..10_000)
 array = [*1..10_000].take(5000)
 p binary_search_tree(array, number)
