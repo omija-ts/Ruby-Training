@@ -20,7 +20,7 @@
 
 def binary_search_tree(array, number)
   i = 0
-  high = array.size
+  high =array.size
   low = 0
   log = Math.log2(array.size.to_i)
 
