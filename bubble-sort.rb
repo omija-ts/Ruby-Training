@@ -4,7 +4,7 @@
 # * range :: 検索範囲: array
 # * flag :: 昇順降順判定用: integer(1 = 昇順, -1 = 降順)
 # ==== 変数
-# * counter :: カウンター: integer 
+# * counter :: カウンター: integer
 # * number :: 数値格納用: integer
 #--
 # ==== 処理内容
@@ -20,7 +20,7 @@ def bubble_sort(range, flag = 1)
       if (range[j] <=> range[j + 1]) == flag
         number = range[j]
         range[j] = range[j + 1]
-        range[j + 1] = number 
+        range[j + 1] = number
         has_completed_sort = false
       end
     end
@@ -33,3 +33,17 @@ end
 my_range = [*0..100].shuffle.take(10)
 puts "#{my_range}:元データ"
 p bubble_sort([1, 2, 3, 7, 5, 6])
+
+foo = 1
+barbaz = 2
+
+case exp
+when foo    then 2
+when barbaz then 3
+end
+
+foo.bar
+   .baz
+
+foo.bar
+   .baz
