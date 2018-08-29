@@ -27,7 +27,7 @@ def binary_search_tree(array, number)
   while i < log
     middle = ((low + high) / 2)
     if array[middle] == number
-      result = middle break
+      result = middlebreak
     else
       middle < number ? low = middle : high = middle
     end
