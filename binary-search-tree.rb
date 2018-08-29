@@ -39,4 +39,4 @@ end
 # 出力 :nodoc:
 number = rand(1..10_000)
 array = [*1..10_000].take(5000)
-p binary_search_tree(array, number)
+p binary_search_tree(array, number)  
