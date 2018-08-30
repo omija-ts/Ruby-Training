@@ -18,14 +18,16 @@ def bubble_sort(range, flag = 1)
     has_completed_sort = true
     for j in 0..(range.size - i)
       if (range[j] <=> range[j + 1]) == flag
-        number = range[j]
-        range[j] = range[j + 1]
-        range[j + 1] = number
+        number             = range[j]
+        range[j]           = range[j + 1]
+        range[j + 1]       = number
         has_completed_sort = false
       end
     end
+
     return range if has_completed_sort
   end
+
   range
 end
 
@@ -33,20 +35,3 @@ end
 my_range = [*0..100].shuffle.take(10)
 puts "#{my_range}:元データ"
 p bubble_sort([1, 2, 3, 7, 5, 6])
-
-foo = 1
-barbaz = 2
-
-case exp
-when foo    then 2
-when barbaz then 3
-end
-
-foo.bar
-   .baz
-
-foo.bar
-   .baz
-
-a =   1
-   
