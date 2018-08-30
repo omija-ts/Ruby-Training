@@ -18,9 +18,9 @@ def bubble_sort(range, flag = 1)
     has_completed_sort = true
     for j in 0..(range.size - i)
       if (range[j] <=> range[j + 1]) == flag
-        number             = range[j]
-        range[j]           = range[j + 1]
-        range[j + 1]       = number
+        number = range[j]
+        range[j] = range[j + 1]
+        range[j + 1] = number
         has_completed_sort = false
       end
     end
